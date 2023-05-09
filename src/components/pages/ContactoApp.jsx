@@ -3,24 +3,36 @@ import { useState } from "react";
 import { TextField, Button, Card } from "@mui/material";
 import swal from "sweetalert";
 import { Send } from "@mui/icons-material";
+import { addDoc, collection } from "firebase/firestore/lite";
+import { db } from "../../firebase/Firebase";
 
 export const ContactoApp = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, reset } = useForm();
+  const registerCollection = collection(db, "mensajes");
+  const [nombre, setNombre] = useState();
+  const [email, setEmail] = useState();
+  const [telefono, setTelefono] = useState();
+  const [mensaje, setMensaje] = useState();
 
-  const onSubmit = async (data) => {
+  const store = async (ev) => {
+    ev.preventDefault();
     setIsLoading(true);
-    // Aquí puedes enviar el mensaje por medio de una API o por medio de un correo electrónico
-    // Después de enviar el mensaje, se ejecutará la siguiente línea
-    setIsLoading(false);
+
     reset();
+    setIsLoading(false);
+    await addDoc(registerCollection, {
+      nombre: nombre,
+      email: email,
+      telefono: telefono,
+      mensaje: mensaje,
+    });
     swal({
       title: "Mensaje enviado",
       text: "Gracias por contactarnos. Nos pondremos en contacto contigo a la brevedad.",
       icon: "success",
       button: "Aceptar",
     });
-    console.log(data);
   };
 
   return (
@@ -34,7 +46,7 @@ export const ContactoApp = () => {
           marginBottom: 5,
         }}
       >
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={store}>
           <TextField
             {...register("nombre", { required: true })}
             label="Nombre"
@@ -44,6 +56,7 @@ export const ContactoApp = () => {
             color="warning"
             required
             margin="normal"
+            onChange={(eve) => setNombre(eve.target.value)}
           />
           <TextField
             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
@@ -54,6 +67,7 @@ export const ContactoApp = () => {
             color="primary"
             required
             margin="normal"
+            onChange={(eve) => setEmail(eve.target.value)}
           />
           <TextField
             {...register("telefono", { required: true, pattern: /^[0-9]*$/i })}
@@ -64,6 +78,7 @@ export const ContactoApp = () => {
             color="error"
             required
             margin="normal"
+            onChange={(eve) => setTelefono(eve.target.value)}
           />
           <TextField
             {...register("mensaje")}
@@ -75,6 +90,7 @@ export const ContactoApp = () => {
             margin="normal"
             multiline
             rows={4}
+            onChange={(eve) => setMensaje(eve.target.value)}
           />
           <Button
             variant="contained"
