@@ -1,5 +1,5 @@
 
-export * from './AcercaDeApp';
-export * from './ContactoApp';
-export * from './InicioApp';
-export * from './PadresDeFamiliaApp';
+export * from './AcercaDePage';
+export * from './ContactoPage';
+export * from './InicioPage';
+export * from './PadresDeFamiliaPage';

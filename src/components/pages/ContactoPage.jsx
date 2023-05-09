@@ -11,7 +11,11 @@ import {
   InputLabel,
 } from "@mui/material";
 import swal from "sweetalert";
-import { AddIcCallOutlined, MarkEmailUnreadOutlined, Send } from "@mui/icons-material";
+import {
+  AddIcCallOutlined,
+  MarkEmailUnreadOutlined,
+  Send,
+} from "@mui/icons-material";
 import { addDoc, collection } from "firebase/firestore/lite";
 import { db } from "../../firebase/Firebase";
 
@@ -26,7 +30,8 @@ const gradoGrupo = [
   { id: 8, desc: "3B" },
   { id: 9, desc: "3C" },
 ];
-export const ContactoApp = () => {
+
+export const ContactoPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { register, reset } = useForm();
   const registerCollection = collection(db, "mensajes");
@@ -70,11 +75,24 @@ export const ContactoApp = () => {
           marginBottom: 5,
         }}
       >
-        <Typography align="center" gutterBottom variant="h4" color="primary" className="animate__animated animate__slideInDown">
-          Escríbenos al email <MarkEmailUnreadOutlined fontSize="large"/> : agustinyanez@gmail.com
+        <Typography
+          align="center"
+          gutterBottom
+          variant="h4"
+          color="primary"
+          className="animate__animated animate__slideInDown"
+        >
+          Escríbenos al email <MarkEmailUnreadOutlined fontSize="large" /> :
+          agustinyanez@gmail.com
         </Typography>
-        <Typography align="center" gutterBottom variant="h4" color="primary" className="animate__animated animate__slideInDown">
-          llama al numero <AddIcCallOutlined fontSize="large"/> : 2229709736
+        <Typography
+          align="center"
+          gutterBottom
+          variant="h4"
+          color="primary"
+          className="animate__animated animate__slideInDown"
+        >
+          llama al numero <AddIcCallOutlined fontSize="large" /> : 2229709736
         </Typography>
         <Typography
           align="center"
@@ -110,7 +128,7 @@ export const ContactoApp = () => {
             margin="normal"
             onChange={(eve) => setAlumno(eve.target.value)}
           />
-          <FormControl sx={{ width: "15%" }} required>
+          <FormControl sx={{ width: "20%" }} required>
             <InputLabel id="demo-label" color="success">
               Grado y Grupo
             </InputLabel>

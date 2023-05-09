@@ -1,7 +1,7 @@
-import 'animate.css';
+import "animate.css";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export const InicioApp = () => {
+export const InicioPage = () => {
   return (
     <div className="bloque">
       <Card
@@ -33,7 +33,11 @@ export const InicioApp = () => {
           >
             Misión
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="animate__animated animate__flipInY animate__delay-1s">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="animate__animated animate__flipInY animate__delay-1s"
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>
@@ -68,7 +72,11 @@ export const InicioApp = () => {
           >
             Visión
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="animate__animated animate__flipInY animate__delay-1s">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="animate__animated animate__flipInY animate__delay-1s"
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>
@@ -103,7 +111,11 @@ export const InicioApp = () => {
           >
             Valores
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="animate__animated animate__flipInY animate__delay-1s">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="animate__animated animate__flipInY animate__delay-1s"
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>
