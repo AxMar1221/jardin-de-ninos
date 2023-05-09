@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { TextField, Button, Card } from "@mui/material";
+import { TextField, Button, Card, Typography } from "@mui/material";
 import swal from "sweetalert";
 import { Send } from "@mui/icons-material";
 import { addDoc, collection } from "firebase/firestore/lite";
@@ -46,6 +46,13 @@ export const ContactoApp = () => {
           marginBottom: 5,
         }}
       >
+        <Typography align="center" gutterBottom variant="h4" color="primary">
+          Escríbenos al email:
+          agustinyanez@gmail.com
+        </Typography>
+        <Typography align="center" gutterBottom variant="h5" component="h2" color="secondary">
+          o bien compártenos tus datos y tu mensaje llenando el siguiente formulario:
+        </Typography>
         <form onSubmit={store}>
           <TextField
             {...register("nombre", { required: true })}
