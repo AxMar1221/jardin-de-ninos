@@ -21,6 +21,7 @@ export const InicioPage = () => {
           sx={{
             borderRadius: 5,
           }}
+          className="animate__animated animate__flipInX animate__delay-1s"
         />
         <CardContent>
           <Typography
@@ -60,6 +61,7 @@ export const InicioPage = () => {
           sx={{
             borderRadius: 5,
           }}
+          className="animate__animated animate__flipInX animate__delay-1s"
         />
         <CardContent>
           <Typography
@@ -99,6 +101,7 @@ export const InicioPage = () => {
           sx={{
             borderRadius: 5,
           }}
+          className="animate__animated animate__flipInX animate__delay-1s"
         />
         <CardContent>
           <Typography
