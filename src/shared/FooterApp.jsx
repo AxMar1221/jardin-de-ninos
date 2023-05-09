@@ -16,9 +16,6 @@ function Copyright() {
 export const FooterApp = () => {
   return (
     <Box sx={{ color: "white", p: 6 }} component="footer">
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
       <Typography variant="h6" align="center" color="white" component="p">
         Something here to give the footer a purpose!
       </Typography>
