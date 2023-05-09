@@ -26,12 +26,13 @@ export const AcercaDeApp = () => {
                   }}
                   image="src/assets/miss.jpeg"
                   alt="miss"
+                  className="animate__animated animate__slideInDown"
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" className="animate__animated animate__slideInDown">
                     Nombre del/la Educador/a
                   </Typography>
-                  <Typography>Descripción del/la Educador/a</Typography>
+                  <Typography className="animate__animated animate__slideInDown">Descripción del/la Educador/a</Typography>
                 </CardContent>
               </Card>
             </Grid>

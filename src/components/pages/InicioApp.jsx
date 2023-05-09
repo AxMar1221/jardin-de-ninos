@@ -29,7 +29,7 @@ export const InicioApp = () => {
             component="div"
             align="center"
             color="primary"
-            className="animate__animated animate__slideInDown animate__flipInY animate__delay-1s"
+            className="animate__animated animate__flipInY animate__delay-1s"
           >
             Misión
           </Typography>
