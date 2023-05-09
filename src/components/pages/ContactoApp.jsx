@@ -93,7 +93,7 @@ export const ContactoApp = () => {
             variant="outlined"
             fullWidth
             type="text"
-            color="warning"
+            color="primary"
             required
             margin="normal"
             onChange={(eve) => setNombre(eve.target.value)}
@@ -104,7 +104,7 @@ export const ContactoApp = () => {
             variant="outlined"
             fullWidth
             type="text"
-            color="primary"
+            color="warning"
             required
             margin="normal"
             onChange={(eve) => setAlumno(eve.target.value)}
@@ -156,7 +156,7 @@ export const ContactoApp = () => {
             variant="outlined"
             fullWidth
             required
-            color="success"
+            color="primary"
             margin="normal"
             multiline
             rows={4}
