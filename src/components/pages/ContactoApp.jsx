@@ -74,7 +74,7 @@ export const ContactoApp = () => {
           Escríbenos al email <MarkEmailUnreadOutlined fontSize="large"/> : agustinyanez@gmail.com
         </Typography>
         <Typography align="center" gutterBottom variant="h4" color="primary">
-          llama al numero <AddIcCallOutlined fontSize="large"/> : 2222222222
+          llama al numero <AddIcCallOutlined fontSize="large"/> : 2229709736
         </Typography>
         <Typography
           align="center"
