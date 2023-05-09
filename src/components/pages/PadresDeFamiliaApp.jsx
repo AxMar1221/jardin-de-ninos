@@ -13,7 +13,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8];
 
 export const PadresDeFamiliaApp = () => {
   return (
-    <>
+    <div className="bloque">
       <Box
         sx={{
           pt: 2,
@@ -27,10 +27,11 @@ export const PadresDeFamiliaApp = () => {
             align="center"
             color="white"
             gutterBottom
+            className="animate__animated animate__slideInDown"
           >
             Facturas asociación padres de familia
           </Typography>
-          <Typography variant="h5" align="center" color="white" paragraph>
+          <Typography variant="h5" align="center" color="white" paragraph className="animate__animated animate__slideInDown">
             Something short and leading about the collection below—its contents,
             the creator, etc. Make it short and sweet, but not too short so
             folks don&apos;t simply skip over it entirely.
@@ -75,6 +76,6 @@ export const PadresDeFamiliaApp = () => {
           ))}
         </Grid>
       </Container>
-    </>
+    </div>
   );
 };

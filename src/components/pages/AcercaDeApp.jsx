@@ -4,7 +4,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export const AcercaDeApp = () => {
   return (
-    <>
+    <div className="bloque">
       <div className="container text-center">
         <Container sx={{ py: 6 }}>
         <Grid container spacing={4}>
@@ -39,6 +39,6 @@ export const AcercaDeApp = () => {
         </Grid>
       </Container>
       </div>
-    </>
+    </div>
   );
 };

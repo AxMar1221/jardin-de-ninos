@@ -1,12 +1,14 @@
 import { School } from "@mui/icons-material";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 export const NavbarApp = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
-      <Link>
-        <School sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <Link href="/inicio" underline="hover">
+        <School fontSize="large" sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
       </Link>
+
 
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">

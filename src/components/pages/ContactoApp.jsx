@@ -60,7 +60,7 @@ export const ContactoApp = () => {
   };
 
   return (
-    <>
+    <div className="bloque">
       <Card
         sx={{
           borderRadius: 5,
@@ -70,10 +70,10 @@ export const ContactoApp = () => {
           marginBottom: 5,
         }}
       >
-        <Typography align="center" gutterBottom variant="h4" color="primary">
+        <Typography align="center" gutterBottom variant="h4" color="primary" className="animate__animated animate__slideInDown">
           Escríbenos al email <MarkEmailUnreadOutlined fontSize="large"/> : agustinyanez@gmail.com
         </Typography>
-        <Typography align="center" gutterBottom variant="h4" color="primary">
+        <Typography align="center" gutterBottom variant="h4" color="primary" className="animate__animated animate__slideInDown">
           llama al numero <AddIcCallOutlined fontSize="large"/> : 2229709736
         </Typography>
         <Typography
@@ -82,6 +82,7 @@ export const ContactoApp = () => {
           variant="h5"
           component="h2"
           color="secondary"
+          className="animate__animated animate__slideInDown"
         >
           o bien compártenos tus datos y tu mensaje llenando el siguiente
           formulario:
@@ -173,6 +174,6 @@ export const ContactoApp = () => {
           </Button>
         </form>
       </Card>
-    </>
+    </div>
   );
 };
