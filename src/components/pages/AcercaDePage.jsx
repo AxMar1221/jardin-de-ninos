@@ -31,7 +31,7 @@ export const AcercaDePage = () => {
                       pt: "auto",
                       cursor: "pointer",
                     }}
-                    image="./riosrc/assets/miss.jpeg"
+                    image="./src/assets/miss.jpeg"
                     alt="miss"
                     className="animate__animated animate__slideInDown"
                   />
