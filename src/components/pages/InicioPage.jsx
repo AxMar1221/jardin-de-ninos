@@ -17,7 +17,7 @@ export const InicioPage = () => {
           component="img"
           alt="Misión"
           height="220"
-          image="src/assets/fachada.jpg"
+          image="./src/assets/fachada.jpg"
           sx={{
             borderRadius: 5,
           }}
@@ -57,7 +57,7 @@ export const InicioPage = () => {
           component="img"
           alt="Visión"
           height="220"
-          image="src/assets/fachada.jpg"
+          image="./src/assets/fachada.jpg"
           sx={{
             borderRadius: 5,
           }}
@@ -97,7 +97,7 @@ export const InicioPage = () => {
           component="img"
           alt="valores"
           height="220"
-          image="src/assets/fachada.jpg"
+          image="./src/assets/fachada.jpg"
           sx={{
             borderRadius: 5,
           }}
