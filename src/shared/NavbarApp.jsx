@@ -53,6 +53,22 @@ export const NavbarApp = () => {
           >
             ¿Quienes somos?
           </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-item nav-link ${isActive ? "active" : ""}`
+            }
+            to="/admin"
+          >
+            Administrador
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              `nav-item nav-link ${isActive ? "active" : ""}`
+            }
+            to="/mensajes"
+          >
+            Mensajes
+          </NavLink>
         </div>
       </div>
 

@@ -23,12 +23,15 @@ body {
   width: auto;
   padding: 15px 25px;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
 }
 .bloque {
   padding: 15px 15px;
   margin: 15px 55px;
+}
+input {
+  padding: 15px 5px;
 }
 .logout {
   cursor: pointer;

@@ -20,7 +20,7 @@ export const LoginPage = () => {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: "100vh", padding: 4 }}
+      sx={{ minHeight: "60vh", padding: 4 }}
     >
       <Grid
         item
