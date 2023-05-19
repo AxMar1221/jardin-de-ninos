@@ -45,8 +45,8 @@ export const AuthenticatedPage = () => {
       >
         <Box
           sx={{
-            pt: 2,
-            pb: 2,
+            pt: 12,
+            pb: 12,
           }}
         >
           <form onSubmit={handleSubmit}>

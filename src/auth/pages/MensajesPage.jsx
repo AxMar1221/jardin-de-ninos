@@ -18,7 +18,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { db } from "../../firebase/Firebase";
-// import { db } from "../../../../Jardin de niños/src/firebaseConfig/Firebase";
 
 export const MensajesPage = () => {
   const [mensajes, setMensajes] = useState([]);
@@ -27,7 +26,6 @@ export const MensajesPage = () => {
 
   const getMensajes = async () => {
     const data = await getDocs(mensajesCollection);
-    console.log(data.docs)
 
     setMensajes(data.docs.map((doc) => ({...doc.data(), id: doc.id })));
     setTableMensajes(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
@@ -36,27 +34,27 @@ export const MensajesPage = () => {
   const deleteMensaje = async (id) => {
     const mensajeDoc = doc(db, "mensajes", id);
     await deleteDoc(mensajeDoc);
-    getMensajes
+    getMensajes()
   }
 
   const confirmDelete = (id) => {
     Swal.fire({
-      title: "¿Eliminar registro?",
-      text: "",
+      title: "¿Eliminar mensaje❓",
+      text: "❗Esta acción no se puede deshacer, una vez que elimine el mensaje este no se podrá recuperar❗",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d33",
       cancelButtonColor: "#3885d5",
-      confirmButtonText: "si eliminar registro",
+      confirmButtonText: "Si eliminar mensaje",
     }).then((result) => {
       if (result.isConfirmed) {
         deleteMensaje(id);
-        Swal.fire("Deleted!", "Mensaje eliminado", "success");
+        Swal.fire("Mensaje eliminado ❗", "", "success");
       }
     });
   };
 
-      // ---!!!BUSQUEDA!!!---
+      // ---!!!BÚSQUEDA!!!---
       const [search, setSearch] = useState('');
 
       const searchTerm = (e) => {
