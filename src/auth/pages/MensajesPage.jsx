@@ -39,7 +39,7 @@ export const MensajesPage = () => {
 
   const confirmDelete = (id) => {
     Swal.fire({
-      title: "¿Eliminar mensaje❓",
+      title: "Eliminar mensaje❓",
       text: "❗Esta acción no se puede deshacer, una vez que elimine el mensaje este no se podrá recuperar❗",
       icon: "warning",
       showCancelButton: true,

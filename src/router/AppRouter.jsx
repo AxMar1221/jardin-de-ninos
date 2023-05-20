@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { InicioRoutes } from "../components/routers/InicioRoutes";
 import { FooterApp, NavbarApp } from "../shared";
-import { LoginPage } from "../auth";
+
 
 export const AppRouter = () => {
   return (
@@ -9,7 +9,6 @@ export const AppRouter = () => {
       <NavbarApp />
 
         <Routes>
-          <Route path="login" element={<LoginPage />}/>
           <Route path="/*" element={<InicioRoutes />} />
         </Routes>
 
